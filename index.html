@@ -15,7 +15,7 @@
   --bg: #f6efe2;
   --surface: #fffdf8;
   --surface-2: #f1e6d1;
-  --line: #dec39e;
+  --line: #8c6846;
   --ink: #1c1107;
   --muted: #6a5546;
   --danger: #9b2c1c;
@@ -26,18 +26,7 @@
   --paper-tint: #f5ebd9;
   --f-display: "Bitter", Georgia, "Times New Roman", serif;
   --f-body: "Source Sans 3", "Segoe UI", -apple-system, Roboto, sans-serif;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #1a1009; --surface: #261910; --surface-2: #322216; --line: #4d3622;
-    --ink: #f3e7d3; --muted: #c2ab92; --gold-ink: #e9bd4f; --danger: #e0785f;
-    color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
-  --bg: #1a1009; --surface: #261910; --surface-2: #322216; --line: #4d3622;
-  --ink: #f3e7d3; --muted: #c2ab92; --gold-ink: #e9bd4f; --danger: #e0785f;
-  color-scheme: dark;
+  color-scheme: light;
 }
 * { box-sizing: border-box; }
 body { background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 15px; line-height: 1.5; }
@@ -67,7 +56,8 @@ h2 { font-family: var(--f-display); font-size: 1.15rem; color: var(--ink); margi
 label { display: grid; gap: 4px; font-size: .8rem; font-weight: 700; color: var(--muted); }
 input, select, textarea { font: inherit; font-size: .95rem; color: var(--ink); background: var(--bg); border: 1.5px solid var(--line); border-radius: 6px; padding: 9px 11px; width: 100%; min-width: 0; }
 textarea { min-height: 64px; resize: vertical; }
-input:focus-visible, select:focus-visible, textarea:focus-visible, button:focus-visible { outline: 2px solid var(--gold); outline-offset: 1px; border-color: var(--gold); }
+input:focus-visible, select:focus-visible, textarea:focus-visible, button:focus-visible { outline: 2px solid var(--gold-ink); outline-offset: 2px; border-color: var(--gold-ink); }
+input::placeholder, textarea::placeholder { color: #7a5c3c; opacity: 1; }
 .check { display: flex; align-items: center; gap: 8px; font-size: .9rem; color: var(--ink); font-weight: 600; }
 .check input { width: auto; }
 
@@ -101,7 +91,7 @@ button { font: inherit; cursor: pointer; border-radius: 6px; border: 1.5px solid
 .totals b { font-family: var(--f-display); font-size: 1.5rem; font-variant-numeric: tabular-nums; }
 .totals .note { grid-column: 1 / -1; border: 0; padding: 0; font-size: .85rem; color: var(--muted); }
 
-.example { background: var(--surface-2); border: 1px dashed var(--gold); border-radius: 8px; padding: 10px 14px; font-size: .88rem; display: flex; gap: 10px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+.example { background: var(--surface-2); border: 1px dashed var(--gold-ink); border-radius: 8px; padding: 10px 14px; font-size: .88rem; display: flex; gap: 10px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
 
 .saved-list { display: grid; gap: 6px; max-height: 260px; overflow: auto; }
 .saved-item { display: flex; align-items: center; gap: 8px; border: 1px solid var(--line); border-radius: 6px; padding: 8px 10px; background: var(--bg); }
